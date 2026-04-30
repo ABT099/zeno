@@ -12,6 +12,10 @@ class TextNode:
     def __init__(self, text: str, text_type: TextType, url: str | None = None) -> None:
         self.text = text
         self.text_type = text_type
+
+        if (text_type == TextType.LINK or text_type == TextType.IMAGE) and url is None:
+            raise ValueError(f"URL must be provided for text type {text_type.value}")
+
         self.url = url
 
     def __eq__(self, value: object) -> bool:
