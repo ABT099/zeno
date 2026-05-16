@@ -1,7 +1,9 @@
 
 
-from leafnode import LeafNode
-from parentnode import ParentNode
+from src.inline_markdown import split_nodes_image
+from src.leafnode import LeafNode
+from src.parentnode import ParentNode
+from src.textnode import TextNode, TextType
 
 def main():
     
